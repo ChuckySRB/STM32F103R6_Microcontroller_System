@@ -9,6 +9,8 @@
 #define CORE_INC_CASLAV_H_
 
 
+#include "driver_uart.h"
+
 
 extern void caki();
 

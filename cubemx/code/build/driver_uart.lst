@@ -1,0 +1,700 @@
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"driver_uart.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.uart_receive,"ax",%progbits
+  16              		.align	1
+  17              		.arch armv7-m
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	uart_receive:
+  24              	.LFB71:
+  25              		.file 1 "../Core/Src/driver_uart.c"
+   1:../Core/Src/driver_uart.c **** 
+  26              		.loc 1 51 43 view -0
+  27              		.cfi_startproc
+  28              		@ Volatile: function does not return.
+  29              		@ args = 0, pretend = 0, frame = 8
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              	.LVL0:
+  32              		.loc 1 51 43 is_stmt 0 view .LVU1
+  33 0000 00B5     		push	{lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 4
+  36              		.cfi_offset 14, -4
+  37 0002 83B0     		sub	sp, sp, #12
+  38              	.LCFI1:
+  39              		.cfi_def_cfa_offset 16
+  40              	.LVL1:
+  41              	.L2:
+  42              		.loc 1 52 2 is_stmt 1 discriminator 1 view .LVU2
+  43              		.loc 1 53 2 discriminator 1 view .LVU3
+  44              		.loc 1 55 3 discriminator 1 view .LVU4
+  45 0004 0122     		movs	r2, #1
+  46 0006 0DF10701 		add	r1, sp, #7
+  47 000a 0448     		ldr	r0, .L4
+  48 000c 044B     		ldr	r3, .L4+4
+  49 000e 9847     		blx	r3
+  50              	.LVL2:
+  51              		.loc 1 57 3 discriminator 1 view .LVU5
+  52 0010 4FF0FF31 		mov	r1, #-1
+  53 0014 0120     		movs	r0, #1
+  54 0016 034B     		ldr	r3, .L4+8
+  55 0018 9847     		blx	r3
+  56              	.LVL3:
+  57              		.loc 1 53 7 discriminator 1 view .LVU6
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s 			page 2
+
+
+  58 001a F3E7     		b	.L2
+  59              	.L5:
+  60              		.align	2
+  61              	.L4:
+  62 001c 00000000 		.word	huart1
+  63 0020 00000000 		.word	HAL_UART_Receive_IT
+  64 0024 00000000 		.word	ulTaskNotifyTake
+  65              		.cfi_endproc
+  66              	.LFE71:
+  68              		.section	.text.uart_transmit,"ax",%progbits
+  69              		.align	1
+  70              		.syntax unified
+  71              		.thumb
+  72              		.thumb_func
+  73              		.fpu softvfp
+  75              	uart_transmit:
+  76              	.LFB69:
+  77              		.loc 1 23 44 view -0
+  78              		.cfi_startproc
+  79              		@ Volatile: function does not return.
+  80              		@ args = 0, pretend = 0, frame = 8
+  81              		@ frame_needed = 0, uses_anonymous_args = 0
+  82              	.LVL4:
+  83              		.loc 1 23 44 is_stmt 0 view .LVU8
+  84 0000 00B5     		push	{lr}
+  85              	.LCFI2:
+  86              		.cfi_def_cfa_offset 4
+  87              		.cfi_offset 14, -4
+  88 0002 83B0     		sub	sp, sp, #12
+  89              	.LCFI3:
+  90              		.cfi_def_cfa_offset 16
+  91              	.LVL5:
+  92              	.L7:
+  93              		.loc 1 24 2 is_stmt 1 discriminator 1 view .LVU9
+  94              		.loc 1 25 2 discriminator 1 view .LVU10
+  95              		.loc 1 27 3 discriminator 1 view .LVU11
+  96 0004 4FF0FF32 		mov	r2, #-1
+  97 0008 0DF10701 		add	r1, sp, #7
+  98 000c 074B     		ldr	r3, .L9
+  99 000e 1868     		ldr	r0, [r3]
+ 100 0010 074B     		ldr	r3, .L9+4
+ 101 0012 9847     		blx	r3
+ 102              	.LVL6:
+ 103              		.loc 1 29 3 discriminator 1 view .LVU12
+ 104 0014 0122     		movs	r2, #1
+ 105 0016 0DF10701 		add	r1, sp, #7
+ 106 001a 0648     		ldr	r0, .L9+8
+ 107 001c 064B     		ldr	r3, .L9+12
+ 108 001e 9847     		blx	r3
+ 109              	.LVL7:
+ 110              		.loc 1 31 3 discriminator 1 view .LVU13
+ 111 0020 4FF0FF31 		mov	r1, #-1
+ 112 0024 0120     		movs	r0, #1
+ 113 0026 054B     		ldr	r3, .L9+16
+ 114 0028 9847     		blx	r3
+ 115              	.LVL8:
+ 116              		.loc 1 25 7 discriminator 1 view .LVU14
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s 			page 3
+
+
+ 117 002a EBE7     		b	.L7
+ 118              	.L10:
+ 119              		.align	2
+ 120              	.L9:
+ 121 002c 00000000 		.word	.LANCHOR0
+ 122 0030 00000000 		.word	xQueueReceive
+ 123 0034 00000000 		.word	huart1
+ 124 0038 00000000 		.word	HAL_UART_Transmit_IT
+ 125 003c 00000000 		.word	ulTaskNotifyTake
+ 126              		.cfi_endproc
+ 127              	.LFE69:
+ 129              		.section	.text.HAL_UART_TxCpltCallback,"ax",%progbits
+ 130              		.align	1
+ 131              		.global	HAL_UART_TxCpltCallback
+ 132              		.syntax unified
+ 133              		.thumb
+ 134              		.thumb_func
+ 135              		.fpu softvfp
+ 137              	HAL_UART_TxCpltCallback:
+ 138              	.LVL9:
+ 139              	.LFB70:
+ 140              		.loc 1 38 56 view -0
+ 141              		.cfi_startproc
+ 142              		@ args = 0, pretend = 0, frame = 8
+ 143              		@ frame_needed = 0, uses_anonymous_args = 0
+ 144              		.loc 1 39 2 view .LVU16
+ 145              		.loc 1 39 11 is_stmt 0 view .LVU17
+ 146 0000 0268     		ldr	r2, [r0]
+ 147              		.loc 1 39 31 view .LVU18
+ 148 0002 0E4B     		ldr	r3, .L19
+ 149 0004 1B68     		ldr	r3, [r3]
+ 150              		.loc 1 39 5 view .LVU19
+ 151 0006 9A42     		cmp	r2, r3
+ 152 0008 00D0     		beq	.L18
+ 153 000a 7047     		bx	lr
+ 154              	.L18:
+ 155              		.loc 1 38 56 view .LVU20
+ 156 000c 00B5     		push	{lr}
+ 157              	.LCFI4:
+ 158              		.cfi_def_cfa_offset 4
+ 159              		.cfi_offset 14, -4
+ 160 000e 83B0     		sub	sp, sp, #12
+ 161              	.LCFI5:
+ 162              		.cfi_def_cfa_offset 16
+ 163              	.LBB2:
+ 164              		.loc 1 41 3 is_stmt 1 view .LVU21
+ 165              		.loc 1 41 14 is_stmt 0 view .LVU22
+ 166 0010 0023     		movs	r3, #0
+ 167 0012 0193     		str	r3, [sp, #4]
+ 168              		.loc 1 42 3 is_stmt 1 view .LVU23
+ 169 0014 01A9     		add	r1, sp, #4
+ 170 0016 0A4B     		ldr	r3, .L19+4
+ 171 0018 1868     		ldr	r0, [r3]
+ 172              	.LVL10:
+ 173              		.loc 1 42 3 is_stmt 0 view .LVU24
+ 174 001a 0A4B     		ldr	r3, .L19+8
+ 175 001c 9847     		blx	r3
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s 			page 4
+
+
+ 176              	.LVL11:
+ 177              		.loc 1 43 3 is_stmt 1 view .LVU25
+ 178 001e 019B     		ldr	r3, [sp, #4]
+ 179 0020 4BB1     		cbz	r3, .L11
+ 180              		.loc 1 43 3 discriminator 1 view .LVU26
+ 181 0022 4FF0E023 		mov	r3, #-536813568
+ 182 0026 4FF08052 		mov	r2, #268435456
+ 183 002a C3F8042D 		str	r2, [r3, #3332]
+ 184              		.loc 1 43 3 discriminator 1 view .LVU27
+ 185              		.syntax unified
+ 186              	@ 43 "Core/Src/driver_uart.c" 1
+ 187 002e BFF34F8F 		dsb
+ 188              	@ 0 "" 2
+ 189              		.loc 1 43 3 discriminator 1 view .LVU28
+ 190              	@ 43 "Core/Src/driver_uart.c" 1
+ 191 0032 BFF36F8F 		isb
+ 192              	@ 0 "" 2
+ 193              		.loc 1 43 28 discriminator 1 view .LVU29
+ 194              		.thumb
+ 195              		.syntax unified
+ 196              	.L11:
+ 197              	.LBE2:
+ 198              		.loc 1 45 1 is_stmt 0 view .LVU30
+ 199 0036 03B0     		add	sp, sp, #12
+ 200              	.LCFI6:
+ 201              		.cfi_def_cfa_offset 4
+ 202              		@ sp needed
+ 203 0038 5DF804FB 		ldr	pc, [sp], #4
+ 204              	.L20:
+ 205              		.align	2
+ 206              	.L19:
+ 207 003c 00000000 		.word	huart1
+ 208 0040 00000000 		.word	.LANCHOR1
+ 209 0044 00000000 		.word	vTaskNotifyGiveFromISR
+ 210              		.cfi_endproc
+ 211              	.LFE70:
+ 213              		.section	.text.HAL_UART_RxCpltCallback,"ax",%progbits
+ 214              		.align	1
+ 215              		.global	HAL_UART_RxCpltCallback
+ 216              		.syntax unified
+ 217              		.thumb
+ 218              		.thumb_func
+ 219              		.fpu softvfp
+ 221              	HAL_UART_RxCpltCallback:
+ 222              	.LVL12:
+ 223              	.LFB72:
+ 224              		.loc 1 64 56 is_stmt 1 view -0
+ 225              		.cfi_startproc
+ 226              		@ args = 0, pretend = 0, frame = 8
+ 227              		@ frame_needed = 0, uses_anonymous_args = 0
+ 228              		.loc 1 65 2 view .LVU32
+ 229              		.loc 1 65 11 is_stmt 0 view .LVU33
+ 230 0000 0268     		ldr	r2, [r0]
+ 231              		.loc 1 65 31 view .LVU34
+ 232 0002 0E4B     		ldr	r3, .L29
+ 233 0004 1B68     		ldr	r3, [r3]
+ 234              		.loc 1 65 5 view .LVU35
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s 			page 5
+
+
+ 235 0006 9A42     		cmp	r2, r3
+ 236 0008 00D0     		beq	.L28
+ 237 000a 7047     		bx	lr
+ 238              	.L28:
+ 239              		.loc 1 64 56 view .LVU36
+ 240 000c 00B5     		push	{lr}
+ 241              	.LCFI7:
+ 242              		.cfi_def_cfa_offset 4
+ 243              		.cfi_offset 14, -4
+ 244 000e 83B0     		sub	sp, sp, #12
+ 245              	.LCFI8:
+ 246              		.cfi_def_cfa_offset 16
+ 247              	.LBB3:
+ 248              		.loc 1 67 3 is_stmt 1 view .LVU37
+ 249              		.loc 1 67 14 is_stmt 0 view .LVU38
+ 250 0010 0023     		movs	r3, #0
+ 251 0012 0193     		str	r3, [sp, #4]
+ 252              		.loc 1 68 3 is_stmt 1 view .LVU39
+ 253 0014 01A9     		add	r1, sp, #4
+ 254 0016 0A4B     		ldr	r3, .L29+4
+ 255 0018 1868     		ldr	r0, [r3]
+ 256              	.LVL13:
+ 257              		.loc 1 68 3 is_stmt 0 view .LVU40
+ 258 001a 0A4B     		ldr	r3, .L29+8
+ 259 001c 9847     		blx	r3
+ 260              	.LVL14:
+ 261              		.loc 1 69 3 is_stmt 1 view .LVU41
+ 262 001e 019B     		ldr	r3, [sp, #4]
+ 263 0020 4BB1     		cbz	r3, .L21
+ 264              		.loc 1 69 3 discriminator 1 view .LVU42
+ 265 0022 4FF0E023 		mov	r3, #-536813568
+ 266 0026 4FF08052 		mov	r2, #268435456
+ 267 002a C3F8042D 		str	r2, [r3, #3332]
+ 268              		.loc 1 69 3 discriminator 1 view .LVU43
+ 269              		.syntax unified
+ 270              	@ 69 "Core/Src/driver_uart.c" 1
+ 271 002e BFF34F8F 		dsb
+ 272              	@ 0 "" 2
+ 273              		.loc 1 69 3 discriminator 1 view .LVU44
+ 274              	@ 69 "Core/Src/driver_uart.c" 1
+ 275 0032 BFF36F8F 		isb
+ 276              	@ 0 "" 2
+ 277              		.loc 1 69 28 discriminator 1 view .LVU45
+ 278              		.thumb
+ 279              		.syntax unified
+ 280              	.L21:
+ 281              	.LBE3:
+ 282              		.loc 1 71 1 is_stmt 0 view .LVU46
+ 283 0036 03B0     		add	sp, sp, #12
+ 284              	.LCFI9:
+ 285              		.cfi_def_cfa_offset 4
+ 286              		@ sp needed
+ 287 0038 5DF804FB 		ldr	pc, [sp], #4
+ 288              	.L30:
+ 289              		.align	2
+ 290              	.L29:
+ 291 003c 00000000 		.word	huart1
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s 			page 6
+
+
+ 292 0040 00000000 		.word	.LANCHOR2
+ 293 0044 00000000 		.word	vTaskNotifyGiveFromISR
+ 294              		.cfi_endproc
+ 295              	.LFE72:
+ 297              		.section	.rodata.uart_init.str1.4,"aMS",%progbits,1
+ 298              		.align	2
+ 299              	.LC0:
+ 300 0000 5472616E 		.ascii	"Transmit a task\000"
+ 300      736D6974 
+ 300      20612074 
+ 300      61736B00 
+ 301              		.align	2
+ 302              	.LC1:
+ 303 0010 52656365 		.ascii	"Receive a task\000"
+ 303      69766520 
+ 303      61207461 
+ 303      736B00
+ 304              		.section	.text.uart_init,"ax",%progbits
+ 305              		.align	1
+ 306              		.global	uart_init
+ 307              		.syntax unified
+ 308              		.thumb
+ 309              		.thumb_func
+ 310              		.fpu softvfp
+ 312              	uart_init:
+ 313              	.LFB73:
+ 314              		.loc 1 78 17 is_stmt 1 view -0
+ 315              		.cfi_startproc
+ 316              		@ args = 0, pretend = 0, frame = 0
+ 317              		@ frame_needed = 0, uses_anonymous_args = 0
+ 318 0000 30B5     		push	{r4, r5, lr}
+ 319              	.LCFI10:
+ 320              		.cfi_def_cfa_offset 12
+ 321              		.cfi_offset 4, -12
+ 322              		.cfi_offset 5, -8
+ 323              		.cfi_offset 14, -4
+ 324 0002 83B0     		sub	sp, sp, #12
+ 325              	.LCFI11:
+ 326              		.cfi_def_cfa_offset 24
+ 327              		.loc 1 80 2 view .LVU48
+ 328 0004 0F4B     		ldr	r3, .L33
+ 329 0006 0193     		str	r3, [sp, #4]
+ 330 0008 0325     		movs	r5, #3
+ 331 000a 0095     		str	r5, [sp]
+ 332 000c 0023     		movs	r3, #0
+ 333 000e 8022     		movs	r2, #128
+ 334 0010 0D49     		ldr	r1, .L33+4
+ 335 0012 0E48     		ldr	r0, .L33+8
+ 336 0014 0E4C     		ldr	r4, .L33+12
+ 337 0016 A047     		blx	r4
+ 338              	.LVL15:
+ 339              		.loc 1 81 2 view .LVU49
+ 340 0018 0E4B     		ldr	r3, .L33+16
+ 341 001a 0193     		str	r3, [sp, #4]
+ 342 001c 0095     		str	r5, [sp]
+ 343 001e 0023     		movs	r3, #0
+ 344 0020 8022     		movs	r2, #128
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s 			page 7
+
+
+ 345 0022 0D49     		ldr	r1, .L33+20
+ 346 0024 0D48     		ldr	r0, .L33+24
+ 347 0026 A047     		blx	r4
+ 348              	.LVL16:
+ 349              		.loc 1 83 2 view .LVU50
+ 350              		.loc 1 83 18 is_stmt 0 view .LVU51
+ 351 0028 0022     		movs	r2, #0
+ 352 002a 0121     		movs	r1, #1
+ 353 002c 8020     		movs	r0, #128
+ 354 002e 0C4B     		ldr	r3, .L33+28
+ 355 0030 9847     		blx	r3
+ 356              	.LVL17:
+ 357              		.loc 1 83 16 view .LVU52
+ 358 0032 0C4B     		ldr	r3, .L33+32
+ 359 0034 1860     		str	r0, [r3]
+ 360              		.loc 1 85 2 is_stmt 1 view .LVU53
+ 361              		.loc 1 85 18 is_stmt 0 view .LVU54
+ 362 0036 0120     		movs	r0, #1
+ 363 0038 0B4B     		ldr	r3, .L33+36
+ 364 003a 9847     		blx	r3
+ 365              	.LVL18:
+ 366              		.loc 1 85 16 view .LVU55
+ 367 003c 0B4B     		ldr	r3, .L33+40
+ 368 003e 1860     		str	r0, [r3]
+ 369              		.loc 1 86 1 view .LVU56
+ 370 0040 03B0     		add	sp, sp, #12
+ 371              	.LCFI12:
+ 372              		.cfi_def_cfa_offset 12
+ 373              		@ sp needed
+ 374 0042 30BD     		pop	{r4, r5, pc}
+ 375              	.L34:
+ 376              		.align	2
+ 377              	.L33:
+ 378 0044 00000000 		.word	.LANCHOR1
+ 379 0048 00000000 		.word	.LC0
+ 380 004c 00000000 		.word	uart_transmit
+ 381 0050 00000000 		.word	xTaskCreate
+ 382 0054 00000000 		.word	.LANCHOR2
+ 383 0058 10000000 		.word	.LC1
+ 384 005c 00000000 		.word	uart_receive
+ 385 0060 00000000 		.word	xQueueGenericCreate
+ 386 0064 00000000 		.word	.LANCHOR0
+ 387 0068 00000000 		.word	xQueueCreateMutex
+ 388 006c 00000000 		.word	.LANCHOR3
+ 389              		.cfi_endproc
+ 390              	.LFE73:
+ 392              		.section	.text.UART_Transmit,"ax",%progbits
+ 393              		.align	1
+ 394              		.global	UART_Transmit
+ 395              		.syntax unified
+ 396              		.thumb
+ 397              		.thumb_func
+ 398              		.fpu softvfp
+ 400              	UART_Transmit:
+ 401              	.LVL19:
+ 402              	.LFB74:
+ 403              		.loc 1 91 34 is_stmt 1 view -0
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s 			page 8
+
+
+ 404              		.cfi_startproc
+ 405              		@ args = 0, pretend = 0, frame = 8
+ 406              		@ frame_needed = 0, uses_anonymous_args = 0
+ 407              		.loc 1 91 34 is_stmt 0 view .LVU58
+ 408 0000 10B5     		push	{r4, lr}
+ 409              	.LCFI13:
+ 410              		.cfi_def_cfa_offset 8
+ 411              		.cfi_offset 4, -8
+ 412              		.cfi_offset 14, -4
+ 413 0002 82B0     		sub	sp, sp, #8
+ 414              	.LCFI14:
+ 415              		.cfi_def_cfa_offset 16
+ 416 0004 8DF80700 		strb	r0, [sp, #7]
+ 417              		.loc 1 92 2 is_stmt 1 view .LVU59
+ 418 0008 0023     		movs	r3, #0
+ 419 000a 4FF0FF32 		mov	r2, #-1
+ 420 000e 0DF10701 		add	r1, sp, #7
+ 421 0012 0348     		ldr	r0, .L37
+ 422              	.LVL20:
+ 423              		.loc 1 92 2 is_stmt 0 view .LVU60
+ 424 0014 0068     		ldr	r0, [r0]
+ 425 0016 034C     		ldr	r4, .L37+4
+ 426 0018 A047     		blx	r4
+ 427              	.LVL21:
+ 428              		.loc 1 93 1 view .LVU61
+ 429 001a 02B0     		add	sp, sp, #8
+ 430              	.LCFI15:
+ 431              		.cfi_def_cfa_offset 8
+ 432              		@ sp needed
+ 433 001c 10BD     		pop	{r4, pc}
+ 434              	.L38:
+ 435 001e 00BF     		.align	2
+ 436              	.L37:
+ 437 0020 00000000 		.word	.LANCHOR0
+ 438 0024 00000000 		.word	xQueueGenericSend
+ 439              		.cfi_endproc
+ 440              	.LFE74:
+ 442              		.section	.text.Transmit_Char,"ax",%progbits
+ 443              		.align	1
+ 444              		.global	Transmit_Char
+ 445              		.syntax unified
+ 446              		.thumb
+ 447              		.thumb_func
+ 448              		.fpu softvfp
+ 450              	Transmit_Char:
+ 451              	.LVL22:
+ 452              	.LFB75:
+ 453              		.loc 1 95 27 is_stmt 1 view -0
+ 454              		.cfi_startproc
+ 455              		@ args = 0, pretend = 0, frame = 0
+ 456              		@ frame_needed = 0, uses_anonymous_args = 0
+ 457              		.loc 1 95 27 is_stmt 0 view .LVU63
+ 458 0000 38B5     		push	{r3, r4, r5, lr}
+ 459              	.LCFI16:
+ 460              		.cfi_def_cfa_offset 16
+ 461              		.cfi_offset 3, -16
+ 462              		.cfi_offset 4, -12
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s 			page 9
+
+
+ 463              		.cfi_offset 5, -8
+ 464              		.cfi_offset 14, -4
+ 465 0002 0446     		mov	r4, r0
+ 466              		.loc 1 96 2 is_stmt 1 view .LVU64
+ 467 0004 074D     		ldr	r5, .L41
+ 468 0006 4FF0FF31 		mov	r1, #-1
+ 469 000a 2868     		ldr	r0, [r5]
+ 470              	.LVL23:
+ 471              		.loc 1 96 2 is_stmt 0 view .LVU65
+ 472 000c 064B     		ldr	r3, .L41+4
+ 473 000e 9847     		blx	r3
+ 474              	.LVL24:
+ 475              		.loc 1 97 2 is_stmt 1 view .LVU66
+ 476 0010 2046     		mov	r0, r4
+ 477 0012 064B     		ldr	r3, .L41+8
+ 478 0014 9847     		blx	r3
+ 479              	.LVL25:
+ 480              		.loc 1 98 2 view .LVU67
+ 481 0016 0023     		movs	r3, #0
+ 482 0018 1A46     		mov	r2, r3
+ 483 001a 1946     		mov	r1, r3
+ 484 001c 2868     		ldr	r0, [r5]
+ 485 001e 044C     		ldr	r4, .L41+12
+ 486 0020 A047     		blx	r4
+ 487              	.LVL26:
+ 488              		.loc 1 99 1 is_stmt 0 view .LVU68
+ 489 0022 38BD     		pop	{r3, r4, r5, pc}
+ 490              	.L42:
+ 491              		.align	2
+ 492              	.L41:
+ 493 0024 00000000 		.word	.LANCHOR3
+ 494 0028 00000000 		.word	xQueueSemaphoreTake
+ 495 002c 00000000 		.word	UART_Transmit
+ 496 0030 00000000 		.word	xQueueGenericSend
+ 497              		.cfi_endproc
+ 498              	.LFE75:
+ 500              		.section	.text.Transmit_String,"ax",%progbits
+ 501              		.align	1
+ 502              		.global	Transmit_String
+ 503              		.syntax unified
+ 504              		.thumb
+ 505              		.thumb_func
+ 506              		.fpu softvfp
+ 508              	Transmit_String:
+ 509              	.LVL27:
+ 510              	.LFB76:
+ 511              		.loc 1 101 36 is_stmt 1 view -0
+ 512              		.cfi_startproc
+ 513              		@ args = 0, pretend = 0, frame = 0
+ 514              		@ frame_needed = 0, uses_anonymous_args = 0
+ 515              		.loc 1 101 36 is_stmt 0 view .LVU70
+ 516 0000 70B5     		push	{r4, r5, r6, lr}
+ 517              	.LCFI17:
+ 518              		.cfi_def_cfa_offset 16
+ 519              		.cfi_offset 4, -16
+ 520              		.cfi_offset 5, -12
+ 521              		.cfi_offset 6, -8
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s 			page 10
+
+
+ 522              		.cfi_offset 14, -4
+ 523 0002 0646     		mov	r6, r0
+ 524              		.loc 1 102 2 is_stmt 1 view .LVU71
+ 525              		.loc 1 102 15 is_stmt 0 view .LVU72
+ 526 0004 0C4B     		ldr	r3, .L47
+ 527 0006 9847     		blx	r3
+ 528              	.LVL28:
+ 529              		.loc 1 102 15 view .LVU73
+ 530 0008 0546     		mov	r5, r0
+ 531              	.LVL29:
+ 532              		.loc 1 103 2 is_stmt 1 view .LVU74
+ 533 000a 4FF0FF31 		mov	r1, #-1
+ 534 000e 0B4B     		ldr	r3, .L47+4
+ 535 0010 1868     		ldr	r0, [r3]
+ 536              	.LVL30:
+ 537              		.loc 1 103 2 is_stmt 0 view .LVU75
+ 538 0012 0B4B     		ldr	r3, .L47+8
+ 539 0014 9847     		blx	r3
+ 540              	.LVL31:
+ 541              		.loc 1 104 2 is_stmt 1 view .LVU76
+ 542              	.LBB4:
+ 543              		.loc 1 104 7 view .LVU77
+ 544              		.loc 1 104 11 is_stmt 0 view .LVU78
+ 545 0016 0024     		movs	r4, #0
+ 546              		.loc 1 104 2 view .LVU79
+ 547 0018 03E0     		b	.L44
+ 548              	.LVL32:
+ 549              	.L45:
+ 550              		.loc 1 105 4 is_stmt 1 discriminator 3 view .LVU80
+ 551 001a 305D     		ldrb	r0, [r6, r4]	@ zero_extendqisi2
+ 552 001c 094B     		ldr	r3, .L47+12
+ 553 001e 9847     		blx	r3
+ 554              	.LVL33:
+ 555              		.loc 1 104 30 discriminator 3 view .LVU81
+ 556              		.loc 1 104 31 is_stmt 0 discriminator 3 view .LVU82
+ 557 0020 0134     		adds	r4, r4, #1
+ 558              	.LVL34:
+ 559              	.L44:
+ 560              		.loc 1 104 18 is_stmt 1 discriminator 1 view .LVU83
+ 561              		.loc 1 104 2 is_stmt 0 discriminator 1 view .LVU84
+ 562 0022 AC42     		cmp	r4, r5
+ 563 0024 F9DB     		blt	.L45
+ 564              	.LBE4:
+ 565              		.loc 1 107 2 is_stmt 1 view .LVU85
+ 566 0026 0023     		movs	r3, #0
+ 567 0028 1A46     		mov	r2, r3
+ 568 002a 1946     		mov	r1, r3
+ 569 002c 0348     		ldr	r0, .L47+4
+ 570 002e 0068     		ldr	r0, [r0]
+ 571 0030 054C     		ldr	r4, .L47+16
+ 572              	.LVL35:
+ 573              		.loc 1 107 2 is_stmt 0 view .LVU86
+ 574 0032 A047     		blx	r4
+ 575              	.LVL36:
+ 576              		.loc 1 108 1 view .LVU87
+ 577 0034 70BD     		pop	{r4, r5, r6, pc}
+ 578              	.LVL37:
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s 			page 11
+
+
+ 579              	.L48:
+ 580              		.loc 1 108 1 view .LVU88
+ 581 0036 00BF     		.align	2
+ 582              	.L47:
+ 583 0038 00000000 		.word	strlen
+ 584 003c 00000000 		.word	.LANCHOR3
+ 585 0040 00000000 		.word	xQueueSemaphoreTake
+ 586 0044 00000000 		.word	UART_Transmit
+ 587 0048 00000000 		.word	xQueueGenericSend
+ 588              		.cfi_endproc
+ 589              	.LFE76:
+ 591              		.section	.bss.ReceiveTask,"aw",%nobits
+ 592              		.align	2
+ 593              		.set	.LANCHOR2,. + 0
+ 596              	ReceiveTask:
+ 597 0000 00000000 		.space	4
+ 598              		.section	.bss.TransmitMutex,"aw",%nobits
+ 599              		.align	2
+ 600              		.set	.LANCHOR3,. + 0
+ 603              	TransmitMutex:
+ 604 0000 00000000 		.space	4
+ 605              		.section	.bss.TransmitQueue,"aw",%nobits
+ 606              		.align	2
+ 607              		.set	.LANCHOR0,. + 0
+ 610              	TransmitQueue:
+ 611 0000 00000000 		.space	4
+ 612              		.section	.bss.TransmitTask,"aw",%nobits
+ 613              		.align	2
+ 614              		.set	.LANCHOR1,. + 0
+ 617              	TransmitTask:
+ 618 0000 00000000 		.space	4
+ 619              		.text
+ 620              	.Letext0:
+ 621              		.file 2 "../d:\\program files\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\include\\mach
+ 622              		.file 3 "../d:\\program files\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\include\\sys\
+ 623              		.file 4 "../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h"
+ 624              		.file 5 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ 625              		.file 6 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 626              		.file 7 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 627              		.file 8 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
+ 628              		.file 9 "../Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ 629              		.file 10 "../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h"
+ 630              		.file 11 "../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h"
+ 631              		.file 12 "../Core/Inc/usart.h"
+ 632              		.file 13 "../<built-in>"
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 driver_uart.c
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:16     .text.uart_receive:0000000000000000 $t
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:23     .text.uart_receive:0000000000000000 uart_receive
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:62     .text.uart_receive:000000000000001c $d
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:69     .text.uart_transmit:0000000000000000 $t
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:75     .text.uart_transmit:0000000000000000 uart_transmit
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:121    .text.uart_transmit:000000000000002c $d
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:130    .text.HAL_UART_TxCpltCallback:0000000000000000 $t
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:137    .text.HAL_UART_TxCpltCallback:0000000000000000 HAL_UART_TxCpltCallback
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:207    .text.HAL_UART_TxCpltCallback:000000000000003c $d
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:214    .text.HAL_UART_RxCpltCallback:0000000000000000 $t
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:221    .text.HAL_UART_RxCpltCallback:0000000000000000 HAL_UART_RxCpltCallback
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:291    .text.HAL_UART_RxCpltCallback:000000000000003c $d
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:298    .rodata.uart_init.str1.4:0000000000000000 $d
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:305    .text.uart_init:0000000000000000 $t
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:312    .text.uart_init:0000000000000000 uart_init
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:378    .text.uart_init:0000000000000044 $d
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:393    .text.UART_Transmit:0000000000000000 $t
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:400    .text.UART_Transmit:0000000000000000 UART_Transmit
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:437    .text.UART_Transmit:0000000000000020 $d
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:443    .text.Transmit_Char:0000000000000000 $t
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:450    .text.Transmit_Char:0000000000000000 Transmit_Char
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:493    .text.Transmit_Char:0000000000000024 $d
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:501    .text.Transmit_String:0000000000000000 $t
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:508    .text.Transmit_String:0000000000000000 Transmit_String
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:583    .text.Transmit_String:0000000000000038 $d
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:592    .bss.ReceiveTask:0000000000000000 $d
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:596    .bss.ReceiveTask:0000000000000000 ReceiveTask
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:599    .bss.TransmitMutex:0000000000000000 $d
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:603    .bss.TransmitMutex:0000000000000000 TransmitMutex
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:606    .bss.TransmitQueue:0000000000000000 $d
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:610    .bss.TransmitQueue:0000000000000000 TransmitQueue
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:613    .bss.TransmitTask:0000000000000000 $d
+C:\Users\HP\AppData\Local\Temp\ccrvnAnm.s:617    .bss.TransmitTask:0000000000000000 TransmitTask
+
+UNDEFINED SYMBOLS
+huart1
+HAL_UART_Receive_IT
+ulTaskNotifyTake
+xQueueReceive
+HAL_UART_Transmit_IT
+vTaskNotifyGiveFromISR
+xTaskCreate
+xQueueGenericCreate
+xQueueCreateMutex
+xQueueGenericSend
+xQueueSemaphoreTake
+strlen

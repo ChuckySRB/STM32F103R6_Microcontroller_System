@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HP\AppData\Local\Temp\ccoZas15.s 			page 1
+ARM GAS  C:\Users\HP\AppData\Local\Temp\cc5dR0SX.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -15,48 +15,155 @@ ARM GAS  C:\Users\HP\AppData\Local\Temp\ccoZas15.s 			page 1
   12              		.text
   13              	.Ltext0:
   14              		.cfi_sections	.debug_frame
-  15              		.section	.text.caki,"ax",%progbits
-  16              		.align	1
-  17              		.global	caki
-  18              		.arch armv7-m
-  19              		.syntax unified
-  20              		.thumb
-  21              		.thumb_func
-  22              		.fpu softvfp
-  24              	caki:
-  25              	.LFB0:
-  26              		.file 1 "Core/Src/caslav.c"
-   1:Core/Src/caslav.c **** /*
-   2:Core/Src/caslav.c ****  * caslav.c
-   3:Core/Src/caslav.c ****  *
-   4:Core/Src/caslav.c ****  *  Created on: Jan 9, 2024
-   5:Core/Src/caslav.c ****  *      Author: ChuckySRB
-   6:Core/Src/caslav.c ****  */
-   7:Core/Src/caslav.c **** 
-   8:Core/Src/caslav.c **** 
-   9:Core/Src/caslav.c **** #include "caslav.h"
-  10:Core/Src/caslav.c **** 
-  11:Core/Src/caslav.c **** 
-  12:Core/Src/caslav.c **** void caki(){
-  27              		.loc 1 12 12 view -0
-  28              		.cfi_startproc
-  29              		@ args = 0, pretend = 0, frame = 0
-  30              		@ frame_needed = 0, uses_anonymous_args = 0
-  31              		@ link register save eliminated.
-  13:Core/Src/caslav.c **** 
-  14:Core/Src/caslav.c **** }
-  32              		.loc 1 14 1 view .LVU1
-  33 0000 7047     		bx	lr
-  34              		.cfi_endproc
-  35              	.LFE0:
-  37              		.text
-  38              	.Letext0:
-ARM GAS  C:\Users\HP\AppData\Local\Temp\ccoZas15.s 			page 2
+  15              		.section	.rodata.SpamTask.str1.4,"aMS",%progbits,1
+  16              		.align	2
+  17              	.LC0:
+  18 0000 75636B79 		.ascii	"uckySRB :)\000"
+  18      53524220 
+  18      3A2900
+  19              		.section	.text.SpamTask,"ax",%progbits
+  20              		.align	1
+  21              		.global	SpamTask
+  22              		.arch armv7-m
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  26              		.fpu softvfp
+  28              	SpamTask:
+  29              	.LFB69:
+  30              		.file 1 "../Core/Src/caslav.c"
+   1:../Core/Src/caslav.c **** 
+  31              		.loc 1 12 28 view -0
+  32              		.cfi_startproc
+  33              		@ Volatile: function does not return.
+  34              		@ args = 0, pretend = 0, frame = 0
+  35              		@ frame_needed = 0, uses_anonymous_args = 0
+  36              	.LVL0:
+  37              		.loc 1 12 28 is_stmt 0 view .LVU1
+  38 0000 08B5     		push	{r3, lr}
+  39              	.LCFI0:
+  40              		.cfi_def_cfa_offset 8
+  41              		.cfi_offset 3, -8
+  42              		.cfi_offset 14, -4
+  43              	.LVL1:
+  44              	.L2:
+  45              		.loc 1 13 2 is_stmt 1 discriminator 1 view .LVU2
+  46              		.loc 1 14 3 discriminator 1 view .LVU3
+  47 0002 C820     		movs	r0, #200
+  48 0004 054B     		ldr	r3, .L4
+  49 0006 9847     		blx	r3
+  50              	.LVL2:
+  51              		.loc 1 15 3 discriminator 1 view .LVU4
+  52 0008 4320     		movs	r0, #67
+  53 000a 054C     		ldr	r4, .L4+4
+  54 000c A047     		blx	r4
+  55              	.LVL3:
+ARM GAS  C:\Users\HP\AppData\Local\Temp\cc5dR0SX.s 			page 2
+
+
+  56              		.loc 1 16 3 discriminator 1 view .LVU5
+  57 000e 0548     		ldr	r0, .L4+8
+  58 0010 054B     		ldr	r3, .L4+12
+  59 0012 9847     		blx	r3
+  60              	.LVL4:
+  61              		.loc 1 17 3 discriminator 1 view .LVU6
+  62 0014 0D20     		movs	r0, #13
+  63 0016 A047     		blx	r4
+  64              	.LVL5:
+  65              		.loc 1 13 8 discriminator 1 view .LVU7
+  66 0018 F3E7     		b	.L2
+  67              	.L5:
+  68 001a 00BF     		.align	2
+  69              	.L4:
+  70 001c 00000000 		.word	vTaskDelay
+  71 0020 00000000 		.word	Transmit_Char
+  72 0024 00000000 		.word	.LC0
+  73 0028 00000000 		.word	Transmit_String
+  74              		.cfi_endproc
+  75              	.LFE69:
+  77              		.section	.rodata.caki.str1.4,"aMS",%progbits,1
+  78              		.align	2
+  79              	.LC1:
+  80 0000 5370616D 		.ascii	"Spam\000"
+  80      00
+  81              		.section	.text.caki,"ax",%progbits
+  82              		.align	1
+  83              		.global	caki
+  84              		.syntax unified
+  85              		.thumb
+  86              		.thumb_func
+  87              		.fpu softvfp
+  89              	caki:
+  90              	.LFB70:
+  91              		.loc 1 21 12 view -0
+  92              		.cfi_startproc
+  93              		@ args = 0, pretend = 0, frame = 0
+  94              		@ frame_needed = 0, uses_anonymous_args = 0
+  95 0000 10B5     		push	{r4, lr}
+  96              	.LCFI1:
+  97              		.cfi_def_cfa_offset 8
+  98              		.cfi_offset 4, -8
+  99              		.cfi_offset 14, -4
+ 100 0002 82B0     		sub	sp, sp, #8
+ 101              	.LCFI2:
+ 102              		.cfi_def_cfa_offset 16
+ 103              		.loc 1 22 2 view .LVU9
+ 104 0004 064B     		ldr	r3, .L8
+ 105 0006 9847     		blx	r3
+ 106              	.LVL6:
+ 107              		.loc 1 23 2 view .LVU10
+ 108 0008 0023     		movs	r3, #0
+ 109 000a 0193     		str	r3, [sp, #4]
+ 110 000c 0222     		movs	r2, #2
+ 111 000e 0092     		str	r2, [sp]
+ 112 0010 6422     		movs	r2, #100
+ 113 0012 0449     		ldr	r1, .L8+4
+ARM GAS  C:\Users\HP\AppData\Local\Temp\cc5dR0SX.s 			page 3
+
+
+ 114 0014 0448     		ldr	r0, .L8+8
+ 115 0016 054C     		ldr	r4, .L8+12
+ 116 0018 A047     		blx	r4
+ 117              	.LVL7:
+ 118              		.loc 1 24 1 is_stmt 0 view .LVU11
+ 119 001a 02B0     		add	sp, sp, #8
+ 120              	.LCFI3:
+ 121              		.cfi_def_cfa_offset 8
+ 122              		@ sp needed
+ 123 001c 10BD     		pop	{r4, pc}
+ 124              	.L9:
+ 125 001e 00BF     		.align	2
+ 126              	.L8:
+ 127 0020 00000000 		.word	uart_init
+ 128 0024 00000000 		.word	.LC1
+ 129 0028 00000000 		.word	SpamTask
+ 130 002c 00000000 		.word	xTaskCreate
+ 131              		.cfi_endproc
+ 132              	.LFE70:
+ 134              		.text
+ 135              	.Letext0:
+ 136              		.file 2 "../d:\\program files\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\include\\mach
+ 137              		.file 3 "../d:\\program files\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\include\\sys\
+ 138              		.file 4 "../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h"
+ 139              		.file 5 "../Core/Inc/driver_uart.h"
+ 140              		.file 6 "../Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ARM GAS  C:\Users\HP\AppData\Local\Temp\cc5dR0SX.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 caslav.c
-C:\Users\HP\AppData\Local\Temp\ccoZas15.s:16     .text.caki:0000000000000000 $t
-C:\Users\HP\AppData\Local\Temp\ccoZas15.s:24     .text.caki:0000000000000000 caki
+C:\Users\HP\AppData\Local\Temp\cc5dR0SX.s:16     .rodata.SpamTask.str1.4:0000000000000000 $d
+C:\Users\HP\AppData\Local\Temp\cc5dR0SX.s:20     .text.SpamTask:0000000000000000 $t
+C:\Users\HP\AppData\Local\Temp\cc5dR0SX.s:28     .text.SpamTask:0000000000000000 SpamTask
+C:\Users\HP\AppData\Local\Temp\cc5dR0SX.s:70     .text.SpamTask:000000000000001c $d
+C:\Users\HP\AppData\Local\Temp\cc5dR0SX.s:78     .rodata.caki.str1.4:0000000000000000 $d
+C:\Users\HP\AppData\Local\Temp\cc5dR0SX.s:82     .text.caki:0000000000000000 $t
+C:\Users\HP\AppData\Local\Temp\cc5dR0SX.s:89     .text.caki:0000000000000000 caki
+C:\Users\HP\AppData\Local\Temp\cc5dR0SX.s:127    .text.caki:0000000000000020 $d
 
-NO UNDEFINED SYMBOLS
+UNDEFINED SYMBOLS
+vTaskDelay
+Transmit_Char
+Transmit_String
+uart_init
+xTaskCreate
