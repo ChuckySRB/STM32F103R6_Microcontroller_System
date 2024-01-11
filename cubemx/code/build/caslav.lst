@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s 			page 1
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccIObROV.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s 			page 1
   55              		.loc 1 13 14 is_stmt 0 view .LVU7
   56 0010 0024     		movs	r4, #0
   57              		.loc 1 13 2 view .LVU8
-ARM GAS  C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s 			page 2
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccIObROV.s 			page 2
 
 
   58 0012 04E0     		b	.L2
@@ -116,168 +116,225 @@ ARM GAS  C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s 			page 1
  108              		.thumb_func
  109              		.fpu softvfp
  111              	SpamTask:
- 112              	.LFB70:
- 113              		.loc 1 18 28 is_stmt 1 view -0
-ARM GAS  C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s 			page 3
+ 112              	.LVL9:
+ 113              	.LFB70:
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccIObROV.s 			page 3
 
 
- 114              		.cfi_startproc
- 115              		@ Volatile: function does not return.
- 116              		@ args = 0, pretend = 0, frame = 0
- 117              		@ frame_needed = 0, uses_anonymous_args = 0
- 118              	.LVL9:
+ 114              		.loc 1 18 28 is_stmt 1 view -0
+ 115              		.cfi_startproc
+ 116              		@ Volatile: function does not return.
+ 117              		@ args = 0, pretend = 0, frame = 0
+ 118              		@ frame_needed = 0, uses_anonymous_args = 0
  119              		.loc 1 18 28 is_stmt 0 view .LVU17
  120 0000 08B5     		push	{r3, lr}
  121              	.LCFI1:
  122              		.cfi_def_cfa_offset 8
  123              		.cfi_offset 3, -8
  124              		.cfi_offset 14, -4
- 125              	.LVL10:
- 126              	.L8:
- 127              		.loc 1 19 2 is_stmt 1 discriminator 1 view .LVU18
- 128              		.loc 1 20 3 discriminator 1 view .LVU19
- 129 0002 C820     		movs	r0, #200
- 130 0004 0A4B     		ldr	r3, .L10
- 131 0006 9847     		blx	r3
+ 125              		.loc 1 19 2 is_stmt 1 view .LVU18
+ 126 0002 4821     		movs	r1, #72
+ 127 0004 0020     		movs	r0, #0
+ 128              	.LVL10:
+ 129              		.loc 1 19 2 is_stmt 0 view .LVU19
+ 130 0006 1A4C     		ldr	r4, .L10
+ 131 0008 A047     		blx	r4
  132              	.LVL11:
- 133              		.loc 1 21 3 discriminator 1 view .LVU20
- 134 0008 4320     		movs	r0, #67
- 135 000a 0A4C     		ldr	r4, .L10+4
- 136 000c A047     		blx	r4
+ 133              		.loc 1 20 2 is_stmt 1 view .LVU20
+ 134 000a 1521     		movs	r1, #21
+ 135 000c 0120     		movs	r0, #1
+ 136 000e A047     		blx	r4
  137              	.LVL12:
- 138              		.loc 1 22 3 discriminator 1 view .LVU21
- 139 000e 0A48     		ldr	r0, .L10+8
- 140 0010 0A4B     		ldr	r3, .L10+12
- 141 0012 9847     		blx	r3
+ 138              		.loc 1 21 2 view .LVU21
+ 139 0010 0E21     		movs	r1, #14
+ 140 0012 0120     		movs	r0, #1
+ 141 0014 A047     		blx	r4
  142              	.LVL13:
- 143              		.loc 1 23 3 discriminator 1 view .LVU22
- 144 0014 0D20     		movs	r0, #13
- 145 0016 A047     		blx	r4
- 146              	.LVL14:
- 147              		.loc 1 24 3 discriminator 1 view .LVU23
- 148 0018 0949     		ldr	r1, .L10+16
- 149 001a 0020     		movs	r0, #0
- 150 001c 094C     		ldr	r4, .L10+20
- 151 001e A047     		blx	r4
+ 143              		.loc 1 22 2 view .LVU22
+ 144 0016 1D21     		movs	r1, #29
+ 145 0018 0120     		movs	r0, #1
+ 146 001a A047     		blx	r4
+ 147              	.LVL14:
+ 148              		.loc 1 23 2 view .LVU23
+ 149 001c 1521     		movs	r1, #21
+ 150 001e 0120     		movs	r0, #1
+ 151 0020 A047     		blx	r4
  152              	.LVL15:
- 153              		.loc 1 25 3 discriminator 1 view .LVU24
- 154 0020 094D     		ldr	r5, .L10+24
- 155 0022 2946     		mov	r1, r5
- 156 0024 4020     		movs	r0, #64
- 157 0026 A047     		blx	r4
- 158              	.LVL16:
- 159              		.loc 1 26 3 discriminator 1 view .LVU25
- 160 0028 2946     		mov	r1, r5
- 161 002a 1020     		movs	r0, #16
- 162 002c A047     		blx	r4
- 163              	.LVL17:
- 164              		.loc 1 19 8 discriminator 1 view .LVU26
- 165 002e E8E7     		b	.L8
- 166              	.L11:
- 167              		.align	2
- 168              	.L10:
- 169 0030 00000000 		.word	vTaskDelay
- 170 0034 00000000 		.word	Transmit_Char
-ARM GAS  C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s 			page 4
+ 153              		.loc 1 24 2 view .LVU24
+ 154 0022 1521     		movs	r1, #21
+ 155 0024 0120     		movs	r0, #1
+ 156 0026 A047     		blx	r4
+ 157              	.LVL16:
+ 158              		.loc 1 25 2 view .LVU25
+ 159 0028 0E21     		movs	r1, #14
+ 160 002a 0120     		movs	r0, #1
+ 161 002c A047     		blx	r4
+ 162              	.LVL17:
+ 163              		.loc 1 26 2 view .LVU26
+ 164 002e 0421     		movs	r1, #4
+ 165 0030 0120     		movs	r0, #1
+ 166 0032 A047     		blx	r4
+ 167              	.LVL18:
+ 168              	.L8:
+ 169              		.loc 1 27 2 discriminator 1 view .LVU27
+ 170              		.loc 1 28 3 discriminator 1 view .LVU28
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccIObROV.s 			page 4
 
 
- 171 0038 00000000 		.word	.LC0
- 172 003c 00000000 		.word	Transmit_String
- 173 0040 0C000000 		.word	.LC1
- 174 0044 00000000 		.word	writeLCD
- 175 0048 14000000 		.word	.LC2
- 176              		.cfi_endproc
- 177              	.LFE70:
- 179              		.section	.rodata.caki.str1.4,"aMS",%progbits,1
- 180              		.align	2
- 181              	.LC3:
- 182 0000 5370616D 		.ascii	"Spam\000"
- 182      00
- 183              		.section	.text.caki,"ax",%progbits
- 184              		.align	1
- 185              		.global	caki
- 186              		.syntax unified
- 187              		.thumb
- 188              		.thumb_func
- 189              		.fpu softvfp
- 191              	caki:
- 192              	.LFB71:
- 193              		.loc 1 30 12 view -0
- 194              		.cfi_startproc
- 195              		@ args = 0, pretend = 0, frame = 0
- 196              		@ frame_needed = 0, uses_anonymous_args = 0
- 197 0000 10B5     		push	{r4, lr}
- 198              	.LCFI2:
- 199              		.cfi_def_cfa_offset 8
- 200              		.cfi_offset 4, -8
- 201              		.cfi_offset 14, -4
- 202 0002 82B0     		sub	sp, sp, #8
- 203              	.LCFI3:
- 204              		.cfi_def_cfa_offset 16
- 205              		.loc 1 31 2 view .LVU28
- 206 0004 074B     		ldr	r3, .L14
- 207 0006 9847     		blx	r3
- 208              	.LVL18:
- 209              		.loc 1 32 2 view .LVU29
- 210 0008 074B     		ldr	r3, .L14+4
- 211 000a 9847     		blx	r3
- 212              	.LVL19:
- 213              		.loc 1 33 2 view .LVU30
- 214 000c 0023     		movs	r3, #0
- 215 000e 0193     		str	r3, [sp, #4]
- 216 0010 0222     		movs	r2, #2
- 217 0012 0092     		str	r2, [sp]
- 218 0014 6422     		movs	r2, #100
- 219 0016 0549     		ldr	r1, .L14+8
- 220 0018 0548     		ldr	r0, .L14+12
- 221 001a 064C     		ldr	r4, .L14+16
- 222 001c A047     		blx	r4
- 223              	.LVL20:
- 224              		.loc 1 34 1 is_stmt 0 view .LVU31
- 225 001e 02B0     		add	sp, sp, #8
- 226              	.LCFI4:
- 227              		.cfi_def_cfa_offset 8
- 228              		@ sp needed
-ARM GAS  C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s 			page 5
+ 171 0034 C820     		movs	r0, #200
+ 172 0036 0F4B     		ldr	r3, .L10+4
+ 173 0038 9847     		blx	r3
+ 174              	.LVL19:
+ 175              		.loc 1 29 3 discriminator 1 view .LVU29
+ 176 003a 4320     		movs	r0, #67
+ 177 003c 0E4C     		ldr	r4, .L10+8
+ 178 003e A047     		blx	r4
+ 179              	.LVL20:
+ 180              		.loc 1 30 3 discriminator 1 view .LVU30
+ 181 0040 0E48     		ldr	r0, .L10+12
+ 182 0042 0F4B     		ldr	r3, .L10+16
+ 183 0044 9847     		blx	r3
+ 184              	.LVL21:
+ 185              		.loc 1 31 3 discriminator 1 view .LVU31
+ 186 0046 0D20     		movs	r0, #13
+ 187 0048 A047     		blx	r4
+ 188              	.LVL22:
+ 189              		.loc 1 32 3 discriminator 1 view .LVU32
+ 190 004a 0E49     		ldr	r1, .L10+20
+ 191 004c 0020     		movs	r0, #0
+ 192 004e 0E4C     		ldr	r4, .L10+24
+ 193 0050 A047     		blx	r4
+ 194              	.LVL23:
+ 195              		.loc 1 33 3 discriminator 1 view .LVU33
+ 196 0052 0E4D     		ldr	r5, .L10+28
+ 197 0054 2946     		mov	r1, r5
+ 198 0056 4020     		movs	r0, #64
+ 199 0058 A047     		blx	r4
+ 200              	.LVL24:
+ 201              		.loc 1 34 3 discriminator 1 view .LVU34
+ 202 005a 2946     		mov	r1, r5
+ 203 005c 1020     		movs	r0, #16
+ 204 005e A047     		blx	r4
+ 205              	.LVL25:
+ 206              		.loc 1 35 3 discriminator 1 view .LVU35
+ 207 0060 C421     		movs	r1, #196
+ 208 0062 0020     		movs	r0, #0
+ 209 0064 024C     		ldr	r4, .L10
+ 210 0066 A047     		blx	r4
+ 211              	.LVL26:
+ 212              		.loc 1 36 3 discriminator 1 view .LVU36
+ 213 0068 0121     		movs	r1, #1
+ 214 006a 0846     		mov	r0, r1
+ 215 006c A047     		blx	r4
+ 216              	.LVL27:
+ 217              		.loc 1 27 8 discriminator 1 view .LVU37
+ 218 006e E1E7     		b	.L8
+ 219              	.L11:
+ 220              		.align	2
+ 221              	.L10:
+ 222 0070 00000000 		.word	LCD_Use
+ 223 0074 00000000 		.word	vTaskDelay
+ 224 0078 00000000 		.word	Transmit_Char
+ 225 007c 00000000 		.word	.LC0
+ 226 0080 00000000 		.word	Transmit_String
+ 227 0084 0C000000 		.word	.LC1
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccIObROV.s 			page 5
 
 
- 229 0020 10BD     		pop	{r4, pc}
- 230              	.L15:
- 231 0022 00BF     		.align	2
- 232              	.L14:
- 233 0024 00000000 		.word	uart_init
- 234 0028 00000000 		.word	lcd_init
- 235 002c 00000000 		.word	.LC3
- 236 0030 00000000 		.word	SpamTask
- 237 0034 00000000 		.word	xTaskCreate
- 238              		.cfi_endproc
- 239              	.LFE71:
- 241              		.text
- 242              	.Letext0:
- 243              		.file 2 "../d:\\program files\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\include\\mach
- 244              		.file 3 "../d:\\program files\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\include\\sys\
- 245              		.file 4 "../d:\\program files\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\lib\\gcc\\arm-none-eabi\\10.
- 246              		.file 5 "../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h"
- 247              		.file 6 "../Core/Inc/driver_uart.h"
- 248              		.file 7 "../Core/Inc/driver_lcd.h"
- 249              		.file 8 "../Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
- 250              		.file 9 "../<built-in>"
-ARM GAS  C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s 			page 6
+ 228 0088 00000000 		.word	writeLCD
+ 229 008c 14000000 		.word	.LC2
+ 230              		.cfi_endproc
+ 231              	.LFE70:
+ 233              		.section	.rodata.caki.str1.4,"aMS",%progbits,1
+ 234              		.align	2
+ 235              	.LC3:
+ 236 0000 5370616D 		.ascii	"Spam\000"
+ 236      00
+ 237              		.section	.text.caki,"ax",%progbits
+ 238              		.align	1
+ 239              		.global	caki
+ 240              		.syntax unified
+ 241              		.thumb
+ 242              		.thumb_func
+ 243              		.fpu softvfp
+ 245              	caki:
+ 246              	.LFB71:
+ 247              		.loc 1 40 12 view -0
+ 248              		.cfi_startproc
+ 249              		@ args = 0, pretend = 0, frame = 0
+ 250              		@ frame_needed = 0, uses_anonymous_args = 0
+ 251 0000 10B5     		push	{r4, lr}
+ 252              	.LCFI2:
+ 253              		.cfi_def_cfa_offset 8
+ 254              		.cfi_offset 4, -8
+ 255              		.cfi_offset 14, -4
+ 256 0002 82B0     		sub	sp, sp, #8
+ 257              	.LCFI3:
+ 258              		.cfi_def_cfa_offset 16
+ 259              		.loc 1 41 2 view .LVU39
+ 260 0004 074B     		ldr	r3, .L14
+ 261 0006 9847     		blx	r3
+ 262              	.LVL28:
+ 263              		.loc 1 42 2 view .LVU40
+ 264 0008 074B     		ldr	r3, .L14+4
+ 265 000a 9847     		blx	r3
+ 266              	.LVL29:
+ 267              		.loc 1 43 2 view .LVU41
+ 268 000c 0023     		movs	r3, #0
+ 269 000e 0193     		str	r3, [sp, #4]
+ 270 0010 0222     		movs	r2, #2
+ 271 0012 0092     		str	r2, [sp]
+ 272 0014 6422     		movs	r2, #100
+ 273 0016 0549     		ldr	r1, .L14+8
+ 274 0018 0548     		ldr	r0, .L14+12
+ 275 001a 064C     		ldr	r4, .L14+16
+ 276 001c A047     		blx	r4
+ 277              	.LVL30:
+ 278              		.loc 1 44 1 is_stmt 0 view .LVU42
+ 279 001e 02B0     		add	sp, sp, #8
+ 280              	.LCFI4:
+ 281              		.cfi_def_cfa_offset 8
+ 282              		@ sp needed
+ 283 0020 10BD     		pop	{r4, pc}
+ 284              	.L15:
+ 285 0022 00BF     		.align	2
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccIObROV.s 			page 6
+
+
+ 286              	.L14:
+ 287 0024 00000000 		.word	uart_init
+ 288 0028 00000000 		.word	lcd_init
+ 289 002c 00000000 		.word	.LC3
+ 290 0030 00000000 		.word	SpamTask
+ 291 0034 00000000 		.word	xTaskCreate
+ 292              		.cfi_endproc
+ 293              	.LFE71:
+ 295              		.text
+ 296              	.Letext0:
+ 297              		.file 2 "../d:\\program files\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\include\\mach
+ 298              		.file 3 "../d:\\program files\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\include\\sys\
+ 299              		.file 4 "../d:\\program files\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\lib\\gcc\\arm-none-eabi\\10.
+ 300              		.file 5 "../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h"
+ 301              		.file 6 "../Core/Inc/driver_uart.h"
+ 302              		.file 7 "../Core/Inc/driver_lcd.h"
+ 303              		.file 8 "../Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ 304              		.file 9 "../<built-in>"
+ARM GAS  C:\Users\HP\AppData\Local\Temp\ccIObROV.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 caslav.c
-C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s:16     .text.writeLCD:0000000000000000 $t
-C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s:24     .text.writeLCD:0000000000000000 writeLCD
-C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s:88     .text.writeLCD:000000000000002c $d
-C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s:94     .rodata.SpamTask.str1.4:0000000000000000 $d
-C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s:104    .text.SpamTask:0000000000000000 $t
-C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s:111    .text.SpamTask:0000000000000000 SpamTask
-C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s:169    .text.SpamTask:0000000000000030 $d
-C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s:180    .rodata.caki.str1.4:0000000000000000 $d
-C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s:184    .text.caki:0000000000000000 $t
-C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s:191    .text.caki:0000000000000000 caki
-C:\Users\HP\AppData\Local\Temp\cc0Kmsmw.s:233    .text.caki:0000000000000024 $d
+C:\Users\HP\AppData\Local\Temp\ccIObROV.s:16     .text.writeLCD:0000000000000000 $t
+C:\Users\HP\AppData\Local\Temp\ccIObROV.s:24     .text.writeLCD:0000000000000000 writeLCD
+C:\Users\HP\AppData\Local\Temp\ccIObROV.s:88     .text.writeLCD:000000000000002c $d
+C:\Users\HP\AppData\Local\Temp\ccIObROV.s:94     .rodata.SpamTask.str1.4:0000000000000000 $d
+C:\Users\HP\AppData\Local\Temp\ccIObROV.s:104    .text.SpamTask:0000000000000000 $t
+C:\Users\HP\AppData\Local\Temp\ccIObROV.s:111    .text.SpamTask:0000000000000000 SpamTask
+C:\Users\HP\AppData\Local\Temp\ccIObROV.s:222    .text.SpamTask:0000000000000070 $d
+C:\Users\HP\AppData\Local\Temp\ccIObROV.s:234    .rodata.caki.str1.4:0000000000000000 $d
+C:\Users\HP\AppData\Local\Temp\ccIObROV.s:238    .text.caki:0000000000000000 $t
+C:\Users\HP\AppData\Local\Temp\ccIObROV.s:245    .text.caki:0000000000000000 caki
+C:\Users\HP\AppData\Local\Temp\ccIObROV.s:287    .text.caki:0000000000000024 $d
 
 UNDEFINED SYMBOLS
 LCD_Use

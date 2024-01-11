@@ -16,6 +16,14 @@ void writeLCD(unsigned addr, const char *str) {
 }
 
 void SpamTask(void* params){
+	LCD_Use(LCD_INSTRUCTION, LCD_SET_CG_RAM_ADDRESS_INSTRUCTION | 0x08);
+	LCD_Use(LCD_DATA, 0x15); //		X _ X _ X
+	LCD_Use(LCD_DATA, 0x0E); //		_ X X X _
+	LCD_Use(LCD_DATA, 0x1D); //		X X _ X X
+	LCD_Use(LCD_DATA, 0x15); //		X _ X _ X
+	LCD_Use(LCD_DATA, 0x15); //		X _ X _ X
+	LCD_Use(LCD_DATA, 0x0E); //		_ X X X _
+	LCD_Use(LCD_DATA, 0x04); //		_ _ X _ _
 	while (1){
 		vTaskDelay(pdMS_TO_TICKS(200));
 		Transmit_Char('C');
@@ -24,6 +32,8 @@ void SpamTask(void* params){
 		writeLCD(0x00, "chucky");
 		writeLCD(0x40, "SRB");
 		writeLCD(0x10, "SRB");
+		LCD_Use(LCD_INSTRUCTION, LCD_SET_DD_RAM_ADDRESS_INSTRUCTION | 0x44);
+		LCD_Use(LCD_DATA, 0x01);
 	}
 }
 
