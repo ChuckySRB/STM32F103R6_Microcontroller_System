@@ -10,7 +10,7 @@
 
 
 #include "driver_uart.h"
-
+#include "driver_lcd.h"
 
 extern void caki();
 
